@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  fitbot:
+    build: .
+    restart: unless-stopped
+    environment:
+      # сюда подставьте ваш токен TELEGRAM
+      TELEGRAM_TOKEN: "${TELEGRAM_TOKEN}"
+    # если планируете вебхук, пробросьте порт
+    # ports:
+    #   - "8443:8443"
